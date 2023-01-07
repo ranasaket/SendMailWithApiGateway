@@ -4,14 +4,7 @@ import boto3
 from botocore.exceptions import ClientError
 ses=boto3.client('ses')
 SENDER=""
-conn = pymysql.connect(
-        user="",
-        password="",
-        host="",
-        port=3306 ,
-        database=" "
 
-    )     
 def send_emails(name, email):
     try:
        res = ses.send_templated_email(
